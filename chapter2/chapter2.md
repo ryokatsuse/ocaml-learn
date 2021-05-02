@@ -10,7 +10,7 @@
 - 実数と整数は区別されているので整数で使用できる```+```などは使用できない。
 - 実数専用のピリオド付きの四則計算を行う必要がある
 
-````ocaml
+```ocaml
 (3.0 +. 5.0) *. 8./.3.0 ;; // float = 21.3333333333333321
 ```
 
@@ -59,7 +59,6 @@ not false ;;
 2 < 3.0;;
 This expression has type float but an expression was expected of type int
 ```
-
 
 
 
