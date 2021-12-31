@@ -41,3 +41,9 @@ let rec map f lst match lst with
     [] -> []
     | first :: rest -> f first :: map rest
 
+
+
+# let twice7 = f (f 7);;
+
+val twice7 : (int -> int) -> int = <fun>
+
