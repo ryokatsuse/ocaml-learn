@@ -48,4 +48,15 @@ let add_one first rest_result = 1 + rest_result
 (*目的: 受け取ったリストlstの長さを求める*)
 let length lst = fold_right add_one lst 0
 
+(*目的：firstをリストrest_resultの先頭に加える *)
+let cons first rest_result = first :: rest_result
 
+(*目的:lst1とlest2を受け取りそれらを統合したリストを返す *)
+let append lst1 lst2 = fold_right cons lst1 lst2
+
+
+
+
+(*目的: 受け取ったリストlstの各要素の和を求める　リファクタリング*)
+(*sum : int list -> int*)
+let sum lst = fold_right (+) lst 0
