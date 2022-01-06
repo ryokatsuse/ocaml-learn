@@ -38,3 +38,11 @@ let test2 = sum_tree tree2 = 3
 let test3 = sum_tree tree3 = 7
 let test4 = sum_tree tree4 = 15
 
+(*目的：dataが二分探索木treeに含まれているかを調べる *)
+let rec search tree data = match tree with
+  Empty -> false
+  | Leaf (n) -> data = n
+  | Node(t1, n, t2) ->
+    if data = n then true
+    else if data < n then search t1 data
+    else search t2 data
